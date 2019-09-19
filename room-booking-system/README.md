@@ -46,7 +46,5 @@ From the root directory:
 ** Server:
 
     ```
-    
     java -cp build ca4006.BookingServer -Djava.rmi.server.codebase=file:build/ -Djava.rmi.server.hostname=[DNS name | IP] [hostname] [port]
-    
     ```
