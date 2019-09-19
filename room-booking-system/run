@@ -1,0 +1,26 @@
+#!/bin/bash
+
+[ -d build ] || mkdir -p build
+
+if [ "$1" = "s" ]; then
+    echo "Compiling..." && \
+    javac -cp src:$CLASSPATH -d build src/ca4006/BookingServer.java && \
+    echo "Running..." && \
+    java -cp build:$CLASSPATH \
+        -Djava.rmi.server.codebase=file:build/ \
+        -Djava.rmi.server.hostname=$2 \
+        ca4006.BookingServer "$2" "$3"
+
+elif [ "$1" = "stress" ]
+then
+    echo "Compiling..." && \
+    javac -cp src:$CLASSPATH -d build src/ca4006/ClientStressTest.java && \
+    echo "Running..." && \
+    java -cp build:$CLASSPATH ca4006.ClientStressTest "$2" "$3" "$4" "$5"
+else
+    echo "Compiling..." && \
+    javac -cp src:$CLASSPATH -d build src/ca4006/Client.java && \
+    echo "Running..." && \
+    java -cp build:$CLASSPATH ca4006.Client "$2" "$3"
+fi
+

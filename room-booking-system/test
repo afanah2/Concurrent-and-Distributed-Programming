@@ -1,0 +1,11 @@
+#!/bin/bash
+
+[ -d build ] || mkdir -p build
+
+if [ "$1" = "s" ]; then
+    ./run s localhost 9999
+else
+    ./run c localhost 9999
+fi
+
+
