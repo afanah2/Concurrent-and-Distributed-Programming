@@ -21,6 +21,9 @@ javac -cp src:$CLASSPATH -d build src/ca4006/ClientStressTest.java
 
 ## To run a client:
 ./run c [hostname|ip] [port]
+```
+./run c afanah.com 9999
+```
 
 
 
