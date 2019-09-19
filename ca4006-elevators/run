@@ -1,0 +1,9 @@
+#!/bin/bash
+
+[ -d build ] || mkdir -p build
+
+if [ "$1" = "b" ]; then
+    javac -cp src:$CLASSPATH -d build src/ca4006/Main.java
+fi
+
+java -cp build:$CLASSPATH ca4006.Main
