@@ -38,12 +38,12 @@ From the root directory:
     ```
 
 * To execute:
-** Client:
+- Client:
     ```
     java -cp build ca4006.Client [hostname] [port]
     ```
-    
-** Server:
-
+- Server:
+```
 java -cp build ca4006.BookingServer -Djava.rmi.server.codebase=file:build/ -Djava.rmi.server.hostname=[DNS name | IP] [hostname] [port]
+``` 
     
