@@ -1,10 +1,8 @@
 # ca4006-elevators
 
-|Name|
-|Husam Afana|
-
 ## Download and build
 ```
+git clone "https://github.com/afanah2/Concurrent-and-Distributed-Programming/tree/master/ca4006-elevators"
 cd ca4006-elevators
 chmod +x run
 javac -cp src:$CLASSPATH -d build src/ca4006/Main.java
