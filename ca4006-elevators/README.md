@@ -1,8 +1,6 @@
 # ca4006-elevators
 
-|Name|Stundent Number|
-|-------|
-|Matthew Koltun|
+|Name|
 |Husam Afana|
 
 ## Download and build
